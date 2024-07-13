@@ -1,7 +1,15 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="icon" href="{{ asset('assets/sma.png') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
+    
     <form method="POST" action="{{ route('login') }}">
         @csrf
 

@@ -19,6 +19,7 @@
         "@material-tailwind/html": "^2.2.2",
         "aos": "^2.3.4",
         "flowbite": "^2.3.0",
+        "html-pdf": "^3.0.1",
         "preline": "^2.3.0",
         "tailwind-scrollbar": "^3.1.0",
         "tw-elements": "^2.0.0"

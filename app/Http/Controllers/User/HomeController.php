@@ -36,6 +36,18 @@ class HomeController extends Controller
         return view('User/pendaftaran');
     }
 
+    public function readmoreBerita()
+    {
+        $berita = Berita::all();
+
+        return view('User/readmoreBerita', compact('berita'));
+    }
+    public function readmoreAcara()
+    {
+        $acara = Acara::all();
+
+        return view('User/readmoreAcara', compact('acara'));
+    }
     /**
      * Show the form for creating a new resource.
      */
