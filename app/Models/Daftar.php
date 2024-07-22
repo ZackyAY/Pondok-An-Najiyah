@@ -7,15 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Daftar extends Model
 {
-    protected $fillable = [
-        'tgl_daftar',
-        'th_ajaran',
-        'nm_peserta',
-        'tmp_lahir',
-        'tgl_lahir',
-        'jk',
-        'almt_peserta',
-        'image',
-    ];
     use HasFactory;
+
+    protected $table = 'daftars';
+
+    protected $fillable = [
+        'th_ajaran', 
+        'tgl_daftar', 
+        'nm_peserta', 
+        'jk', 
+        'tmp_lahir', 
+        'tgl_lahir', 
+        'almt_peserta', 
+        'image'
+    ];
 }

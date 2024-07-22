@@ -38,7 +38,6 @@
         </div>
     </div>
         </div>
-        mt-8 ml-2 mr-2 table-fixed" data-aos="zoom-out-up" data-aos-duration="2000"
         <div class="mt-8 ml-2 mr-2 table-fixed" data-aos="zoom-out-up" data-aos-duration="2000">    
         <table class="w-full border-collapse border border-gray-300">
             <thead>

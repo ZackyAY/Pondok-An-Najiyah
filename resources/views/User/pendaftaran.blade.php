@@ -1,8 +1,12 @@
-<!-- resources/views/Admin/pendaftaran/create.blade.php -->
 @extends('layouts.userLayout')
 
 @section('content')
-    <div class="max-w-2xl mx-auto mt-32 mb-32 p-4 bg-white shadow-md rounded-lg">
+    <div class="max-w-2xl mx-auto mt-8 p-4 bg-white shadow-md rounded-lg">
+        @if(session('success'))
+            <div class="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+                {{ session('success') }}
+            </div>
+        @endif
         <h1 class="text-2xl font-bold mb-6 text-center">Pendaftaran Peserta Didik Baru</h1>
         <form action="{{ route('daftar.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
