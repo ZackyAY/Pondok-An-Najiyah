@@ -1,10 +1,22 @@
 @extends('layouts.userLayout')
 
 @section('content')
-    <div class="max-w-2xl mx-auto mt-8 p-4 bg-white shadow-md rounded-lg">
-        @if(session('success'))
-            <div class="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
-                {{ session('success') }}
+    <div class="max-w-2xl mx-auto mt-32 mb-32 p-4 bg-white shadow-md rounded-lg">
+        @if (session('success'))
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <strong class="font-bold">{{ session('success') }}</strong>
+                <span class="block sm:inline">Data Succes Diupload</span>
+            </div>
+        @endif
+        @if ($errors->any())
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <strong class="font-bold">Whoops!</strong>
+                <span class="block sm:inline">There were some problems with your input.</span>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
         @endif
         <h1 class="text-2xl font-bold mb-6 text-center">Pendaftaran Peserta Didik Baru</h1>
@@ -24,12 +36,14 @@
             <div class="mb-4">
                 <label for="tanggal_daftar" class="block text-sm font-medium text-gray-700">Tanggal Daftar</label>
                 <input type="date" name="tgl_daftar" id="tanggal_daftar" required
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    value="{{ old('tgl_daftar') }}">
             </div>
             <div class="mb-4">
                 <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap Siswa</label>
                 <input type="text" name="nm_peserta" id="nama" required
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    value="{{ old('nm_peserta') }}">
             </div>
             <div class="mb-4">
                 <span class="block text-sm font-medium text-gray-700">Jenis Kelamin</span>
@@ -49,17 +63,19 @@
             <div class="mb-4">
                 <label for="tempat" class="block text-sm font-medium text-gray-700">Tempat Lahir</label>
                 <input type="text" name="tmp_lahir" id="tempat" required
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    value="{{ old('tmp_lahir') }}">
             </div>
             <div class="mb-4">
                 <label for="tanggal" class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
                 <input type="date" name="tgl_lahir" id="tanggal" required
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    value="{{ old('tgl_lahir') }}">
             </div>
             <div class="mb-4">
                 <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat</label>
                 <textarea name="almt_peserta" id="almt_peserta" required
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">{{ old('almt_peserta') }}</textarea>
             </div>
             <div class="mb-4">
                 <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
@@ -72,4 +88,18 @@
             </button>
         </form>
     </div>
+
+    @if (session('pdf_path'))
+        <script>
+            window.onload = function() {
+                const pdfPath = "{{ asset('storage/' . session('pdf_path')) }}";
+                const link = document.createElement('a');
+                link.href = pdfPath;
+                link.download = 'Pendaftaran.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            };
+        </script>
+    @endif
 @endsection

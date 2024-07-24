@@ -12,7 +12,7 @@
 
 <body>
     <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-duration="2000">
+        <div class="flex flex-wrap items-center justify-between mx-auto p-4" data-aos="zoom-in" data-aos-easing="ease-in" data-aos-duration="2000">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src={{ asset('assets/sma.png') }} class="h-8" alt="Flowbite Logo">
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">AN-NAJIYAH</span>
@@ -45,17 +45,17 @@
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
                     </li>
                     <li class="relative group">
-            <a href="#" id="alumniDropdownToggle" aria-haspopup="true" aria-expanded="false"
-        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-        Alumni
-    </a>
-    <ul id="alumniDropdown"
-        class="absolute hidden bg-white dark:bg-gray-900 text-gray-900 dark:text-white mt-2 space-y-2 rounded shadow-lg">
-        <li><a href="/alumni/2024" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-700">Alumni 2024</a></li>
-        <li><a href="/alumni/2023" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-700">Alumni 2023</a></li>
-        <li><a href="/alumni/2022" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-700">Alumni 2022</a></li>
-    </ul>
-</li>
+                        <a href="#" id="alumniDropdownToggle" aria-haspopup="true" aria-expanded="false"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Alumni
+                        </a>
+                        <ul id="alumniDropdown"
+                            class="absolute hidden bg-white dark:bg-gray-900 text-gray-900 dark:text-white mt-2 space-y-2 rounded shadow-lg">
+                            <li><a href="/alumni/2024" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-700">Alumni 2024</a></li>
+                            <li><a href="/alumni/2023" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-700">Alumni 2023</a></li>
+                            <li><a href="/alumni/2022" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-700">Alumni 2022</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="/contact"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
@@ -68,7 +68,7 @@
     @yield('content')
 
     <footer class="bg-white dark:bg-gray-900" data-aos="fade-down" data-aos-duration="2000">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="mx-auto w-full p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="https://flowbite.com/" class="flex items-center">

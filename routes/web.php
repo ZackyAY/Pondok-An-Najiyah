@@ -13,11 +13,14 @@ Route::get('/about', [HomeController::class, 'about'])->name('home.about');
 Route::get('/alumni/{tahun}', [HomeController::class, 'alumniByYear'])->name('home.alumni_by_year');
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/pendaftaran', [HomeController::class, 'pendaftaran'])->name('home.pendaftaran');
+Route::get('/readmore-berita', [HomeController::class, 'readmoreBerita'])->name('home.readmoreBerita');
+Route::get('/readmore-acara', [HomeController::class, 'readmoreAcara'])->name('home.readmoreAcara');
 
 Route::resource('/admin/berita', BeritaController::class)->names('admin.berita');
 Route::resource('/admin/daftar', DaftarController::class)->names('admin.daftar');
 Route::resource('/admin/acara', AcaraController::class)->names('admin.acara');
 Route::resource('/daftar', DaftarController::class)->names('daftar');
+Route::get('/download-pdf', [DaftarController::class, 'downloadPdf'])->name('admin.download');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

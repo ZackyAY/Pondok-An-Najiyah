@@ -148,7 +148,7 @@
                                 d="M17.2117 2.23726C17.3427 1.84432 17.1304 1.41955 16.7375 1.28851C16.3445 1.15747 15.9198 1.36978 15.7887 1.76272L15.0387 4.01171C14.9077 4.40465 15.12 4.82941 15.5129 4.96045C15.9059 5.09149 16.3306 4.87918 16.4617 4.48624L17.2117 2.23726ZM21.7803 2.21967C22.0732 2.51256 22.0732 2.98744 21.7803 3.28033L19.2803 5.78033C18.9874 6.07322 18.5126 6.07322 18.2197 5.78033C17.9268 5.48744 17.9268 5.01256 18.2197 4.71967L20.7197 2.21967C21.0126 1.92678 21.4874 1.92678 21.7803 2.21967ZM12.8706 3.74087C11.7547 2.54545 9.78611 2.84497 9.07629 4.31816L3.17848 16.5588C2.83795 17.2655 2.99437 18.1114 3.56513 18.6497L5.00386 20.0065C5.53118 20.5037 6.30531 20.6362 6.96799 20.3426L8.38545 19.7146C9.0275 21.0658 10.4048 22 12.0003 22C14.2095 22 16.0003 20.2091 16.0003 18C16.0003 17.4597 15.8932 16.9445 15.6991 16.4743L19.119 14.9591C20.5809 14.3115 20.9679 12.4157 19.8769 11.2469L12.8706 3.74087ZM14.3266 17.0824C14.4387 17.3665 14.5003 17.6761 14.5003 18C14.5003 19.3807 13.3811 20.5 12.0003 20.5C11.0169 20.5 10.1662 19.9322 9.75795 19.1066L14.3266 17.0824ZM19 8.24927C19 7.83505 19.3358 7.49927 19.75 7.49927H21.75C22.1642 7.49927 22.5 7.83505 22.5 8.24927C22.5 8.66348 22.1642 8.99927 21.75 8.99927H19.75C19.3358 8.99927 19 8.66348 19 8.24927Z"
                                 fill="#212121" />
                         </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Berita Pondok</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Berita Sekolah</span>
                     </a>
                 </li>
                 <li>
@@ -169,7 +169,7 @@
                                     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1" />
                             </g>
                         </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Acara Pondok</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Acara Sekolah</span>
                     </a>
                 </li>
             </ul>
