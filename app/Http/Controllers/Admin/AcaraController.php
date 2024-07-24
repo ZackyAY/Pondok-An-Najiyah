@@ -41,27 +41,50 @@ class AcaraController extends Controller
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('admin.acara.index')->with('success', 'News created successfully.');
+        return redirect()->route('admin.acara.index')->with('success', 'Acara berhasil dibuat.');
     }
 
     public function show($id)
     {
         $acara = Acara::findOrFail($id);
-    return view('Admin/Acara/view', compact('acara'));
+        return view('Admin/Acara/view', compact('acara'));
     }
 
     public function edit($id)
     {
-        // Edit a single user
+        $acara = Acara::findOrFail($id);
+        return view('Admin/Acara/edit', compact('acara'));
     }
 
     public function update(Request $request, $id)
     {
-        // Update user information
+        $request->validate([
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $acara = Acara::findOrFail($id);
+
+        if ($request->hasFile('image')) {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+            $imagePath = 'images/' . $imageName;
+            $acara->image = $imagePath;
+        }
+
+        $acara->judul = $request->judul;
+        $acara->deskripsi = $request->deskripsi;
+        $acara->save();
+
+        return redirect()->route('admin.acara.index')->with('success', 'Acara berhasil diperbarui.');
     }
 
     public function destroy($id)
     {
-        // Delete a user
+        $acara = Acara::findOrFail($id);
+        $acara->delete();
+
+        return redirect()->route('admin.acara.index')->with('success', 'Acara berhasil dihapus.');
     }
 }

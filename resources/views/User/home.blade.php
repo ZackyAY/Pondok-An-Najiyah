@@ -146,7 +146,7 @@
                             <div class="p-6 pt-0">
                                 <a class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-500 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
                                     type="button" href="{{ route('home.readmoreBerita', $item->id) }}">
-                                    Read More
+                                    Lihat Semua
                                 </a>
                             </div>
                         </div>
