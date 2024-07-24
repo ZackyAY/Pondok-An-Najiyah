@@ -23,9 +23,9 @@ class HomeController extends Controller
     {
         return view('User/about');
     }
-    public function alumniByYear($tahun)
+    public function alumni()
     {
-        return view('User.alumni_by_year', ['tahun' => $tahun]);
+        return view('User/alumni');
     }
     public function contact()
     {

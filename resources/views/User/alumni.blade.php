@@ -6,7 +6,7 @@
 <div class="mt-32 text-center">
         <h1 class="text-4xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200" data-aos="zoom-out-down"
             data-aos-duration="2000">
-            ALUMNI {{ $tahun }} AN-NAJIYAH
+            ALUMNI 2024 AN-NAJIYAH
         </h1>
         
         <h1 class="text-2xl sm:text-2xl font-bold text-gray-800 dark:text-gray-200 mt-14" data-aos="zoom-out-up" data-aos-duration="2000">
@@ -15,7 +15,7 @@
                     <div class="w-full border-t border-gray-300 dark:border-gray-700"></div>
                 </div>
                 <div class="relative flex justify-center">
-                    <span class="px-3 bg-blue-500 text-white font-bold">Alumni Tahun {{ $tahun }}</span>
+                    <span class="px-3 bg-blue-500 text-white font-bold">Alumni Tahun 2024</span>
                 </div>
             </div>
         </h1>

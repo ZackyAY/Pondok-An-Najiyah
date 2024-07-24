@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\DaftarController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/about', [HomeController::class, 'about'])->name('home.about');
-Route::get('/alumni/{tahun}', [HomeController::class, 'alumniByYear'])->name('home.alumni_by_year');
+Route::get('/alumni', [HomeController::class, 'alumni'])->name('home.alumni');
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/pendaftaran', [HomeController::class, 'pendaftaran'])->name('home.pendaftaran');
 Route::get('/readmore-berita', [HomeController::class, 'readmoreBerita'])->name('home.readmoreBerita');
