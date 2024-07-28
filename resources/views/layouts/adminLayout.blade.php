@@ -96,6 +96,23 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('profile.show') }}"
+                        class="flex items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group @if (Request::is('admin/daftar')) bg-gray-200 text-gray-900 @endif">
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg
+                            PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+                        <svg width="24" height="24" enable-background="new 0 0 24 24" id="Layer_1"
+                            version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                                <path
+                                    d="M9,9c0-1.7,1.3-3,3-3s3,1.3,3,3c0,1.7-1.3,3-3,3S9,10.7,9,9z M12,14c-4.6,0-6,3.3-6,3.3V19h12v-1.7C18,17.3,16.6,14,12,14z" />
+                            </g>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Administrator</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('daftar.index') }}"
                         class="flex items-center p-2 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group @if (Request::is('admin/daftar')) bg-gray-200 text-gray-900 @endif">
                         <?xml version="1.0" ?>
