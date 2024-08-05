@@ -3,7 +3,10 @@
 @section('content')
 <div class="max-w-2xl mx-auto p-4 bg-white shadow-md rounded-lg mt-10">
     <h1 class="text-2xl font-bold mb-6">REGISTER ADMINISTRATOR</h1>
-    <form action="{{ route('register') }}" method="POST">
+    @if (session()->has('error'))
+        <h6>{{session('error')}}</h6>
+    @endif
+    <form action="{{ route('administrator.create') }}" method="POST">
         @csrf
         <div class="mb-4">
             <label for="name" class="block text-sm font-medium text-gray-700">Nama:</label>

@@ -18,10 +18,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="px-6 py-4">{{ $user->name }}</td>
-                    <td class="px-6 py-4">{{ $user->email }}</td>
-                </tr>
+                @foreach ($users as $user)
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="px-6 py-4">{{ $user->name }}</td>
+                        <td class="px-6 py-4">{{ $user->email }}</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

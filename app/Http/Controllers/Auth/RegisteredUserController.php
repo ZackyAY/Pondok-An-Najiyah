@@ -17,11 +17,38 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create(): View
+    public function add(): View
     {
         return view('admin.administrator.create'); // Mengarahkan ke view khusus administrator
     }
 
+    public function tambah(Request $request)
+    {
+        try {
+            //code...
+            $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+                'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            ]);
+    
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+        } catch (\Throwable $th) {
+            //throw $th;
+            return back()->with('error', $th->getMessage());
+        }
+
+        return redirect(route('dashboard'));
+    }
+
+    public function create(): View
+    {
+        return view('auth.register'); // Mengarahkan ke view khusus administrator
+    }
     /**
      * Handle an incoming registration request.
      *

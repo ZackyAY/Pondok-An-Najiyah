@@ -7,7 +7,7 @@
                 class="flex items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div
                     class="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-3xl font-bold text-gray-800">
-                    100
+                    {{$userCount}}
                 </div>
                 <div class="ml-4">
                     <h3 class="text-xl font-semibold mb-2">Pendaftar</h3>
@@ -21,7 +21,21 @@
                 class="flex items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div
                     class="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-3xl font-bold text-gray-800">
-                    100
+                    {{$pendaftarCount}}
+                </div>
+                <div class="ml-4">
+                    <h3 class="text-xl font-semibold mb-2">Pendaftar</h3>
+                    <p class="text-gray-600">Jumlah pendaftar saat ini</p>
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <a href="#"
+                class="flex items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div
+                    class="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-3xl font-bold text-gray-800">
+                    {{$beritaCount}}
                 </div>
                 <div class="ml-4">
                     <h3 class="text-xl font-semibold mb-2">Berita</h3>
@@ -35,7 +49,7 @@
                 class="flex items-center max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div
                     class="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-3xl font-bold text-gray-800">
-                    100
+                    {{$acaraCount}}
                 </div>
                 <div class="ml-4">
                     <h3 class="text-xl font-semibold mb-2">Acara</h3>
