@@ -8,6 +8,7 @@ use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\DaftarController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AlumniController;
 
 
 
@@ -19,10 +20,12 @@ Route::get('/pendaftaran', [HomeController::class, 'pendaftaran'])->name('home.p
 Route::get('/readmore-berita', [HomeController::class, 'readmoreBerita'])->name('home.readmoreBerita');
 Route::get('/readmore-acara', [HomeController::class, 'readmoreAcara'])->name('home.readmoreAcara');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/alumni-2023-annajiyah', [AlumniController::class, 'show2023'])->name('alumni.2023');
 
 Route::resource('/admin/berita', BeritaController::class)->names('admin.berita');
 Route::resource('/admin/daftar', DaftarController::class)->names('admin.daftar');
 Route::resource('/admin/acara', AcaraController::class)->names('admin.acara');
+
 Route::resource('/daftar', DaftarController::class)->names('daftar');
 Route::get('/download-pdf', [DaftarController::class, 'downloadPdf'])->name('admin.download');
 
